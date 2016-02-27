@@ -1,20 +1,22 @@
-// Foundation
-@import "../../bower_components/foundation-sites/scss/foundation";
-@import "settings";
+// Variables
+$use-flexbox: false; // set to false for legacy browser support
 
-@include foundation-global-styles;
-@include foundation-grid;
-@include foundation-typography;
-@include foundation-button;
-@include foundation-flex-video;
-@include foundation-forms;
-@include foundation-pagination;
+// Foundation
+@import "settings";
+@import "../../bower_components/foundation-sites/scss/foundation";
+
+@include foundation-everything($use-flexbox);
+
+// Layouts
+@import "layout/layouts";
 
 // Modules
 
 // Site
 
-// Vendor
+// WordPress
+@import "wordpress/accessibility";
+@import "wordpress/media";
 
 // Shame
 @import "shame";
