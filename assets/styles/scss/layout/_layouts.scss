@@ -1,12 +1,6 @@
 /* ## Site Containers
 --------------------------------------------- */
 
-.site-inner,
-.wrap {
-	margin: 0 auto;
-	max-width: 1200px;
-}
-
 .site-inner {
 	clear: both;
 	padding-top: 40px;
@@ -17,65 +11,163 @@
 
 /* ### Wrapping div for .content and .sidebar-primary */
 
-.content-sidebar-sidebar .content-sidebar-wrap,
-.sidebar-content-sidebar .content-sidebar-wrap,
-.sidebar-sidebar-content .content-sidebar-wrap {
-	width: 980px;
-}
-
-.content-sidebar-sidebar .content-sidebar-wrap {
-	float: left;
-}
-
-.sidebar-content-sidebar .content-sidebar-wrap,
-.sidebar-sidebar-content .content-sidebar-wrap {
-	float: right;
-}
-
-/* ### Content */
-
-.content {
-	float: right;
-	width: 800px;
-}
-
-.content-sidebar .content,
-.content-sidebar-sidebar .content,
-.sidebar-content-sidebar .content {
-	float: left;
-}
-
-.content-sidebar-sidebar .content,
-.sidebar-content-sidebar .content,
-.sidebar-sidebar-content .content {
-	width: 580px;
-}
-
-.full-width-content .content {
+.content-sidebar-wrap,
+.content,
+.sidebar-primary,
+.sidebar-secondary {
 	width: 100%;
 }
 
-/* ### Primary Sidebar */
+@include breakpoint(medium) {
 
-.sidebar-primary {
-	float: right;
-	width: 360px;
+	.site-inner,
+	.wrap
+	 {
+		@if not $flex {
+			@include grid-row;
+		}
+		@else {
+			@include flex-grid-row;
+		}
+	}
+
+	.content-sidebar-wrap
+	 {
+		@if not $flex {
+			@include grid-row;
+		}
+		@else {
+			@include flex-grid-row;
+		}
+	}
+
+	.content-sidebar-sidebar .content-sidebar-wrap,
+	.sidebar-content-sidebar .content-sidebar-wrap,
+	.sidebar-sidebar-content .content-sidebar-wrap {
+		@if not $flex {
+			@include grid-column(10);
+		}
+		@else {
+			@include flex-grid-column(10);
+		}
+	}
+
+	.sidebar-content-sidebar .content-sidebar-wrap {
+		@if not $flex {
+			@include grid-column-position(3);
+		}
+		@else {
+			@include flex-grid-order(2);
+		}
+	}
+
+	.content-sidebar .content-sidebar-wrap,
+	.sidebar-content .content-sidebar-wrap,
+	.content-sidebar-sidebar .content-sidebar-wrap,
+	.sidebar-content-sidebar .content-sidebar-wrap,
+	.sidebar-sidebar-content .content-sidebar-wrap {
+		@if not $flex {
+			@include grid-row;
+		}
+		@else {
+			@include flex-grid-row;
+		}
+	}
+
+
+	/* ### Content */
+
+	.content {
+		@if not $flex {
+			@include grid-column(9);
+		}
+		@else {
+			@include flex-grid-column(9);
+		}
+	}
+
+	.sidebar-content .content,
+	.sidebar-sidebar-content .content {
+		@if not $flex {
+			@include grid-column-position(3);
+		}
+		@else {
+			@include flex-grid-order(2);
+		}
+	}
+
+	.content-sidebar-sidebar .content,
+	.sidebar-content-sidebar .content,
+	.sidebar-sidebar-content .content {
+		@if not $flex {
+			@include grid-column(7 of 10);
+		}
+		@else {
+			@include flex-grid-column(7 of 10);
+		}
+	}
+
+	.full-width-content .content {
+		width: 100%;
+	}
+
+	/* ### Primary Sidebar */
+
+	.sidebar-primary {
+		@if not $flex {
+			@include grid-column(3);
+		}
+		@else {
+			@include flex-grid-column(3);
+		}
+	}
+
+	.sidebar-sidebar-content .sidebar-primary,
+	.sidebar-content-sidebar .sidebar-primary,
+	.content-sidebar-sidebar .sidebar-primary {
+		@if not $flex {
+			@include grid-column(3 of 10);
+		}
+		@else {
+			@include flex-grid-column(3 of 10);
+		}
+	}
+
+	.sidebar-content .sidebar-primary,
+	.sidebar-sidebar-content .sidebar-primary {
+		@if not $flex {
+			@include grid-column-position(-9);
+		}
+		@else {
+			@include flex-grid-order(1);
+		}
+
+	}
+
+	/* ### Secondary Sidebar */
+
+	.sidebar-secondary {
+		@if not $flex {
+			@include grid-column(2);
+		}
+		@else {
+			@include flex-grid-column(2);
+		}
+	}
+
+	.sidebar-content-sidebar .sidebar-secondary {
+		@if not $flex {
+			@include grid-column-position(-10);
+		}
+		@else {
+			@include flex-grid-order(1);
+		}
+	}
+
 }
 
-.sidebar-content .sidebar-primary,
-.sidebar-sidebar-content .sidebar-primary {
-	float: left;
-}
+@include breakpoint(large) {
 
-/* ### Secondary Sidebar */
-
-.sidebar-secondary {
-	float: left;
-	width: 180px;
-}
-
-.content-sidebar-sidebar .sidebar-secondary {
-	float: right;
 }
 
 /* ## Column Classes
