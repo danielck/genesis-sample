@@ -1,0 +1,21 @@
+{
+  "name": "h1-assets",
+  "version": "0.0.1",
+  "description": "H1 assets for Grunt-based development",
+  "devDependencies": {
+    "autoprefixer": "^6.1.2",
+    "csswring": "^4.1.1",
+    "grunt": "^0.4.5",
+    "grunt-bump-wp-version": "^0.1.0",
+    "grunt-contrib-concat": "^0.5.1",
+    "grunt-contrib-uglify": "^0.11.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-postcss": "^0.7.1",
+    "grunt-sass": "^1.1.0",
+    "load-grunt-config": "^0.19.1",
+    "oldie": "^1.3.0"
+  },
+  "dependencies": {
+    "time-grunt": "^1.2.2"
+  }
+}

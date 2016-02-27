@@ -1,0 +1,8 @@
+default:
+  description: 'Default (production) build'
+  tasks:
+    - 'concat'
+    - 'uglify'
+    - 'sass'
+    - 'postcss'
+#   - 'bump_wp_version'

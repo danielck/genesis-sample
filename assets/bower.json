@@ -1,0 +1,21 @@
+{
+  "name": "genesis-foundation",
+  "version": "0.0.1",
+  "homepage": "https://github.com/danielck/genesis-foundation",
+  "authors": [
+    "Daniel Koskinen <dani@dani.fi>",
+    "Tomi Mäenpää <tomi@h1.fi>"
+  ],
+  "license": "GPLv2",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "foundation-sites": "~6.2.0"
+  }
+}
