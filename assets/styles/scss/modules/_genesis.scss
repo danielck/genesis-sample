@@ -1,0 +1,24 @@
+/* ## Genesis
+--------------------------------------------- */
+
+.breadcrumb {
+	margin-bottom: rem-calc(20px);
+}
+
+.archive-description,
+.author-box {
+	background-color: #fff;
+	font-size: rem-calc(16);
+	margin-bottom: rem-calc(40px);
+	padding: rem-calc(40px);
+}
+
+.author-box-title {
+	font-size: rem-calc(16px);
+	margin-bottom: rem-calc(4px);
+}
+
+.archive-description p:last-child,
+.author-box p:last-child {
+	margin-bottom: 0;
+}

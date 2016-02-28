@@ -48,3 +48,26 @@ add_action( 'wp_enqueue_scripts', function() {
 	 */
 	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Lato:300,400,700', array(), CHILD_THEME_VERSION );
 } );
+
+/**
+ * Override genesis menu classes
+ */
+// add_filter( 'genesis_do_nav', function( $nav_output, $nav, $args ) {
+
+//     //$args['menu_id'] = 'the_id_you_want';
+//     $args['menu_class'] = 'dropdown menu'; // replace what was there
+
+//     // check which function should be used to build the nav
+//     // rebuild the nav using the updated arguments
+//     if ( genesis_get_option( 'nav' ) ) {
+//         if ( has_nav_menu( 'primary' ) ) {
+//             $nav = wp_nav_menu( $args );
+//         } elseif ( 'nav-menu' != genesis_get_option( 'nav_type', 'genesis-vestige' ) ) {
+//             $nav = genesis_nav( $args );
+//         }
+//     }
+
+//     // return the modified result
+//     return sprintf( '%2$s%1$s%3$s', $nav, genesis_structural_wrap( 'nav', 'open', 0 ), genesis_structural_wrap( 'nav', 'close', 0 ) );
+
+// }, 10, 3 );

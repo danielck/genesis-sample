@@ -22,11 +22,11 @@ $flex: false; // set to false for legacy browser support
 // @include foundation-button-group;
 // @include foundation-callout;
 // @include foundation-close-button;
-// @include foundation-menu;
+@include foundation-menu;
 // @include foundation-menu-icon;
 // @include foundation-drilldown-menu;
-// @include foundation-dropdown;
-// @include foundation-dropdown-menu;
+@include foundation-dropdown;
+@include foundation-dropdown-menu;
 // @include foundation-flex-video;
 // @include foundation-label;
 // @include foundation-media-object;
@@ -54,13 +54,20 @@ $flex: false; // set to false for legacy browser support
 // Layouts
 @import "layout/layouts";
 
-// Modules
-
 // Site
+@import "site/header.scss";
+
+// Modules
+@import "modules/avatar";
+@import "modules/genesis";
+@import "modules/searchform";
 
 // WordPress
 @import "wordpress/accessibility";
+@import "wordpress/align";
 @import "wordpress/media";
+@import "wordpress/plugins";
+@import "wordpress/widgets";
 
 // Shame
 @import "shame";

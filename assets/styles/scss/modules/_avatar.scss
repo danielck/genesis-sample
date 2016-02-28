@@ -1,0 +1,19 @@
+/* ## Avatar
+--------------------------------------------- */
+
+.avatar {
+	float: left;
+}
+
+.alignleft .avatar,
+.author-box .avatar {
+	margin-right: rem-calc(24);
+}
+
+.alignright .avatar {
+	margin-left: rem-calc(24);
+}
+
+.comment .avatar {
+	margin: rem-calc(0 16px 24px 0);
+}
