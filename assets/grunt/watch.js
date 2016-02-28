@@ -10,7 +10,8 @@ module.exports = {
 			'js/dev/**/*.js'
 		],
 		tasks: [
-			'concat'
+			'concat',
+			'babel'
 		]
 	},
 

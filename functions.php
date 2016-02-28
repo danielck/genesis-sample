@@ -27,9 +27,56 @@ add_action( 'after_setup_theme', function() {
 	//* Add support for 3-column footer widgets
 	add_theme_support( 'genesis-footer-widgets', 3 );
 
+	//* Remove original genesis nav's and replace them with our own
+	remove_action( 'genesis_after_header', 'genesis_do_nav' 	);
+	remove_action( 'genesis_after_header', 'genesis_do_subnav' 	);
 
 } );
 
+/**
+ * Replace original primary menu
+ */
+add_action( 'genesis_after_header', function() {
+
+	//* Do nothing if menu not supported
+	if ( ! genesis_nav_menu_supported( 'primary' ) || ! has_nav_menu( 'primary' ) )
+		return;
+
+	$class = 'dropdown menu genesis-nav-menu menu-primary';
+
+	if ( genesis_a11y( 'headings' ) ) {
+		printf( '<h2 class="screen-reader-text">%s</h2>', __( 'Main navigation', 'genesis' ) );
+	}
+
+	genesis_nav_menu( array(
+		'theme_location' => 'primary',
+		'menu_class'     => $class,
+		'items_wrap' 	 => '<ul id="%1$s" class="%2$s" data-dropdown-menu>%3$s</ul>',
+		'walker'		 => new Foundation_Dropdown_Nav_Menu
+	) );
+
+} );
+
+/**
+ * Replace original secondary menu
+ *
+ */
+add_action( 'genesis_after_header', function() {
+
+	//* Do nothing if menu not supported
+	if ( ! genesis_nav_menu_supported( 'secondary' ) || ! has_nav_menu( 'secondary' ) )
+		return;
+
+	$class = 'dropdown menu genesis-nav-menu menu-secondary';
+
+	genesis_nav_menu( array(
+		'theme_location' => 'secondary',
+		'menu_class'     => $class,
+		'items_wrap' 	 => '<ul id="%1$s" class="%2$s" data-dropdown-menu>%3$s</ul>',
+		'walker'		 => new Foundation_Dropdown_Nav_Menu
+	) );
+
+} );
 
 /**
  * Use the stylesheet inside /assets/styles/css/
@@ -46,28 +93,10 @@ add_action( 'wp_enqueue_scripts', function() {
 	/**
 	 * Enqueue Google Fonts
 	 */
-	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Lato:300,400,700', array(), CHILD_THEME_VERSION );
+	wp_enqueue_script( 'genesisfoundation-app', get_stylesheet_directory_uri() . '/assets/js/built/app.built.js', array( 'jquery' ), null, true );
 } );
 
 /**
- * Override genesis menu classes
+ * Include classes
  */
-// add_filter( 'genesis_do_nav', function( $nav_output, $nav, $args ) {
-
-//     //$args['menu_id'] = 'the_id_you_want';
-//     $args['menu_class'] = 'dropdown menu'; // replace what was there
-
-//     // check which function should be used to build the nav
-//     // rebuild the nav using the updated arguments
-//     if ( genesis_get_option( 'nav' ) ) {
-//         if ( has_nav_menu( 'primary' ) ) {
-//             $nav = wp_nav_menu( $args );
-//         } elseif ( 'nav-menu' != genesis_get_option( 'nav_type', 'genesis-vestige' ) ) {
-//             $nav = genesis_nav( $args );
-//         }
-//     }
-
-//     // return the modified result
-//     return sprintf( '%2$s%1$s%3$s', $nav, genesis_structural_wrap( 'nav', 'open', 0 ), genesis_structural_wrap( 'nav', 'close', 0 ) );
-
-// }, 10, 3 );
+ require_once( 'includes/class.foundation_nav_walker.php' );

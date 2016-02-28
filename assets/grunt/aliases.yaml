@@ -2,6 +2,7 @@ default:
   description: 'Default (production) build'
   tasks:
     - 'concat'
+    - 'babel'
     - 'uglify'
     - 'sass'
     - 'postcss'
