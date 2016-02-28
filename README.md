@@ -4,6 +4,11 @@ This is a work-in-progress version of the Genesis Sample Theme using the Foundat
 
 Github project link: https://github.com/copyblogger/genesis-sample
 
+## Build instructions
+
+Requires node, npm and Bower.
+
+Run `npm install` and `bower install` inside the assets/ directory. Then run `grunt` or `grunt watch`.
 
 ## Installation Instructions
 
