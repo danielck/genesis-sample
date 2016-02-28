@@ -1,4 +1,6 @@
-# Genesis Sample Theme
+# Genesis Sample Theme with Foundation 6
+
+This is a work-in-progress version of the Genesis Sample Theme using the Foundation framework (version 6.2).
 
 Github project link: https://github.com/copyblogger/genesis-sample
 
@@ -13,4 +15,8 @@ Github project link: https://github.com/copyblogger/genesis-sample
 
 ## Theme Support
 
-Please visit http://my.studiopress.com/help/ for theme support.
+None. Pull requests are welcome.
+
+## Todo
+
+- Add todo list
