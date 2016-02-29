@@ -93,7 +93,7 @@ add_action( 'wp_enqueue_scripts', function() {
 	/**
 	 * Enqueue Google Fonts
 	 */
-	wp_enqueue_script( 'genesisfoundation-app', get_stylesheet_directory_uri() . '/assets/js/built/app.built.js', array( 'jquery' ), null, true );
+	wp_enqueue_script( 'genesisfoundation-app', get_stylesheet_directory_uri() . '/assets/js/built/app.built.js', array( 'jquery' ), null );
 } );
 
 /**
