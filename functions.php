@@ -31,6 +31,10 @@ add_action( 'after_setup_theme', function() {
 	remove_action( 'genesis_after_header', 'genesis_do_nav' 	);
 	remove_action( 'genesis_after_header', 'genesis_do_subnav' 	);
 
+	//* Move secondary sidebar inside content-sidebar wrap for simpler layouts
+	remove_action( 'genesis_after_content_sidebar_wrap', 'genesis_get_sidebar_alt' );
+	add_action( 'genesis_after_content', 'genesis_get_sidebar_alt' );
+
 } );
 
 /**
