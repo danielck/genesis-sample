@@ -31,29 +31,28 @@ a.alignright {
 img.centered,
 .aligncenter {
 	display: block;
-	margin: 0 auto 24px;
+	margin: 0 auto rem-calc(24px);
 }
 
 img.alignnone,
 .alignnone {
-	margin-bottom: 12px;
+	margin-bottom: rem-calc(12px);
 }
 
 a.alignleft,
 img.alignleft,
 .wp-caption.alignleft {
-	margin: 0 24px 24px 0;
+	margin: rem-calc(0 24px 24px 0);
 }
 
 a.alignright,
 img.alignright,
 .wp-caption.alignright {
-	margin: 0 0 24px 24px;
+	margin: rem-calc(0 0 24px 24px);
 }
 
 .wp-caption-text {
-	font-size: 14px;
-	font-size: 1.4rem;
+	font-size: rem-calc(14);
 	font-weight: 700;
 	text-align: center;
 }
@@ -68,5 +67,5 @@ img.alignright,
 .entry-content .wp-audio-shortcode,
 .entry-content .wp-playlist,
 .entry-content .wp-video {
-	margin: 0 0 28px;
+	margin: rem-calc(0 0 28px 0);
 }

@@ -56,11 +56,15 @@ $flex: false; // set to false for legacy browser support
 
 // Site
 @import "site/header.scss";
+@import "site/menus.scss";
+@import "site/footer.scss";
 
 // Modules
 @import "modules/avatar";
 @import "modules/genesis";
 @import "modules/searchform";
+@import "modules/entries";
+@import "modules/comments";
 
 // WordPress
 @import "wordpress/accessibility";
@@ -71,3 +75,6 @@ $flex: false; // set to false for legacy browser support
 
 // Shame
 @import "shame";
+
+// Print
+@import "print";

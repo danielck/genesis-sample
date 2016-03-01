@@ -5,6 +5,7 @@ TODO: update code with rems
 
 .widget {
 	word-wrap: break-word;
+	background: #fff;
 }
 
 .widget ol > li {
@@ -27,6 +28,7 @@ TODO: update code with rems
 .widget_calendar td,
 .widget_calendar th {
 	text-align: center;
+	padding: 4px 0;
 }
 
 /* ## Featured Content
@@ -45,4 +47,87 @@ TODO: update code with rems
 .featured-content .entry-title {
 	font-size: 20px;
 	font-size: 2rem;
+}
+
+/* # Sidebars
+---------------------------------------------------------------------------------------------------- */
+
+.sidebar {
+}
+
+.sidebar li {
+	border-bottom: 1px dotted #ddd;
+	margin-bottom: rem-calc(10);
+	padding-bottom: rem-calc(10);
+}
+
+.sidebar p:last-child,
+.sidebar ul > li:last-child {
+	margin-bottom: 0;
+}
+
+.sidebar .widget {
+	margin-bottom: rem-calc(40);
+	padding: $global-padding;
+
+	@include breakpoint(960) {
+		padding: rem-calc(40);
+	}
+}
+
+/* # Footer Widgets
+---------------------------------------------------------------------------------------------------- */
+
+.footer-widgets {
+	background-color: #333;
+	clear: both;
+	padding-top: 40px;
+}
+
+.footer-widgets,
+.footer-widgets a {
+	color: #aaa;
+}
+
+.footer-widgets input {
+	border: 1px solid #333;
+}
+
+.footer-widgets a.button,
+.footer-widgets a:hover,
+.footer-widgets a:focus {
+	color: #fff;
+}
+
+.footer-widgets li {
+	border-bottom: 1px dotted #666;
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+}
+
+.footer-widgets .widget {
+	margin-bottom: 40px;
+}
+
+.footer-widgets p:last-child {
+	margin-bottom: 0;
+}
+
+.footer-widgets-1,
+.footer-widgets-2,
+.footer-widgets-3 {
+	width: 340px;
+}
+
+.footer-widgets-1 {
+	margin-right: 60px;
+}
+
+.footer-widgets-1,
+.footer-widgets-2 {
+	float: left;
+}
+
+.footer-widgets-3 {
+	float: right;
 }

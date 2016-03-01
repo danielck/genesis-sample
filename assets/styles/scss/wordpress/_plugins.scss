@@ -19,9 +19,8 @@
 }
 
 .enews-widget input {
-	font-size: 16px;
-	font-size: 1.6rem;
-	margin-bottom: 16px;
+	font-size: rem-calc(16);
+	margin-bottom: rem-calc(16);
 }
 
 .enews-widget input[type="submit"] {
@@ -38,7 +37,7 @@
 }
 
 .enews form + p {
-	margin-top: 24px;
+	margin-top: rem-calc(24px);
 }
 
 /* ## Jetpack
