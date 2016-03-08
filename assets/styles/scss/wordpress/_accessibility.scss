@@ -14,6 +14,7 @@
 .widget_search input[type="submit"]:focus  {
 	@include element-invisible-off;
 
+	position: absolute!important;
 	font-weight: bold;
 	padding: 15px 23px 14px;
 	color: #333;
