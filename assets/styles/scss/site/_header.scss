@@ -4,6 +4,8 @@
 .site-header {
 	background-color: #fff;
 	min-height: 160px;
+
+	@include clearfix;
 }
 
 .site-header .wrap {

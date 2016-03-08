@@ -24,7 +24,7 @@ $flex: false; // set to false for legacy browser support
 // @include foundation-close-button;
 @include foundation-menu;
 // @include foundation-menu-icon;
-// @include foundation-drilldown-menu;
+@include foundation-drilldown-menu;
 @include foundation-dropdown;
 @include foundation-dropdown-menu;
 // @include foundation-flex-video;

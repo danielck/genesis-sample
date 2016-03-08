@@ -55,7 +55,7 @@ add_action( 'genesis_after_header', function() {
 	genesis_nav_menu( array(
 		'theme_location' => 'primary',
 		'menu_class'     => $class,
-		'items_wrap' 	 => '<ul id="%1$s" class="%2$s" data-responsive-menu="medium-dropdown">%3$s</ul>',
+		'items_wrap' 	 => '<ul id="%1$s" class="%2$s" data-responsive-menu="drilldown medium-dropdown">%3$s</ul>',
 		'walker'		 => new Foundation_Dropdown_Nav_Menu
 	) );
 
@@ -71,12 +71,12 @@ add_action( 'genesis_after_header', function() {
 	if ( ! genesis_nav_menu_supported( 'secondary' ) || ! has_nav_menu( 'secondary' ) )
 		return;
 
-	$class = 'dropdown menu genesis-nav-menu menu-secondary';
+	$class = 'vertical medium-horizontal menu genesis-nav-menu menu-secondary';
 
 	genesis_nav_menu( array(
 		'theme_location' => 'secondary',
 		'menu_class'     => $class,
-		'items_wrap' 	 => '<ul id="%1$s" class="%2$s" data-dropdown-menu>%3$s</ul>',
+		'items_wrap' 	 => '<ul id="%1$s" class="%2$s" data-responsive-menu="drilldown medium-dropdown">%3$s</ul>',
 		'walker'		 => new Foundation_Dropdown_Nav_Menu
 	) );
 
