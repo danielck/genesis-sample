@@ -18,7 +18,7 @@ $flex: false; // set to false for legacy browser support
 // @include foundation-accordion;
 // @include foundation-accordion-menu;
 // @include foundation-badge;
-// @include foundation-breadcrumbs;
+@include foundation-breadcrumbs;
 // @include foundation-button-group;
 // @include foundation-callout;
 // @include foundation-close-button;
@@ -65,6 +65,7 @@ $flex: false; // set to false for legacy browser support
 @import "modules/searchform";
 @import "modules/entries";
 @import "modules/comments";
+@import "modules/pagination";
 
 // WordPress
 @import "wordpress/accessibility";
