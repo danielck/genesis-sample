@@ -25,7 +25,7 @@ module.exports = {
 			]
 		},
 		files: {
-			'styles/css/app-legacy.css' : 'styles/css/app.css'
+			'styles/css/app-legacy.css' : 'styles/css/app-legacy.css'
 		}
 	},
 	min: {

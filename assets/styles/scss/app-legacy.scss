@@ -1,0 +1,33 @@
+@import "app";
+
+/**
+ * Styles for IE 8 and below
+ */
+.title-bar {
+	display: none;
+}
+
+/**
+ * Simple dropdown fallback styles
+ */
+body .genesis-nav-menu {
+	.menu-item {
+		position: relative;
+		//z-index: 0;
+	}
+	.menu-item > ul {
+		display: none ;
+	}
+	.menu-item:hover > ul {
+		display: block;
+		position: absolute;
+		top: 100%;
+		background: $dropdownmenu-background;
+		z-index: 1000;
+		min-width: 200px;
+	}
+	.menu-item > ul > li:hover > ul {
+		left: 100%;
+		top: 0;
+	}
+}
