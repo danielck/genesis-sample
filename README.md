@@ -2,13 +2,17 @@
 
 This is a work-in-progress version of the Genesis Sample Theme using the Foundation framework (version 6.2).
 
-Github project link: https://github.com/copyblogger/genesis-sample
+Github project link: https://github.com/danielck/genesis-sample-foundation/
 
 ## Build instructions
 
 Requires node, npm and Bower.
 
 Run `npm install` and `bower install` inside the assets/ directory. Then run `grunt` or `grunt watch`.
+
+## Customizing
+
+The theme is intended as a starting point for projects and by default only includes the styles and JS necessary for the features in the base theme. Edit `/assets/styles/scss/app.scss` to enable or disable parts of Foundation and `/assets/grunt/concat.js` for JavaScript.
 
 ## Installation Instructions
 
@@ -20,8 +24,5 @@ Run `npm install` and `bower install` inside the assets/ directory. Then run `gr
 
 ## Theme Support
 
-None. Pull requests are welcome.
+None. Pull requests and issues are welcome.
 
-## Todo
-
-- Add todo list
