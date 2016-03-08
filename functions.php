@@ -47,6 +47,15 @@ add_action( 'genesis_after_header', function() {
 		return;
 
 	$class = 'vertical medium-horizontal menu genesis-nav-menu menu-primary';
+	$menu_id = 'genesis-nav-primary';
+
+	printf( '<div class="title-bar" data-responsive-toggle="%1$s" data-hide-for="medium">
+  				<button class="menu-icon" type="button" data-toggle></button>
+				<div class="title-bar-title">%2$s</div>
+			</div>',
+			esc_attr( $menu_id ),
+			__( 'Main navigation', 'genesis' )
+			);
 
 	if ( genesis_a11y( 'headings' ) ) {
 		printf( '<h2 class="screen-reader-text">%s</h2>', __( 'Main navigation', 'genesis' ) );
@@ -72,6 +81,15 @@ add_action( 'genesis_after_header', function() {
 		return;
 
 	$class = 'vertical medium-horizontal menu genesis-nav-menu menu-secondary';
+	$menu_id = 'genesis-nav-secondary';
+
+	printf( '<div class="title-bar" data-responsive-toggle="%1$s" data-hide-for="medium">
+  				<button class="menu-icon" type="button" data-toggle></button>
+				<div class="title-bar-title">%2$s</div>
+			</div>',
+			esc_attr( $menu_id ),
+			__( 'Secondary navigation', 'genesis' )
+			);
 
 	genesis_nav_menu( array(
 		'theme_location' => 'secondary',
@@ -80,6 +98,12 @@ add_action( 'genesis_after_header', function() {
 		'walker'		 => new Foundation_Dropdown_Nav_Menu
 	) );
 
+} );
+
+add_filter( 'genesis_attr_nav-secondary', function ( $attributes ) {
+	$attributes['id'] = 'genesis-nav-secondary';
+	$attributes['aria-label'] = __( 'Secondary navigation', 'genesis' );
+	return $attributes;
 } );
 
 /**
