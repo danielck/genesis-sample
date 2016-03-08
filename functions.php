@@ -46,7 +46,7 @@ add_action( 'genesis_after_header', function() {
 	if ( ! genesis_nav_menu_supported( 'primary' ) || ! has_nav_menu( 'primary' ) )
 		return;
 
-	$class = 'dropdown menu genesis-nav-menu menu-primary';
+	$class = 'vertical medium-horizontal menu genesis-nav-menu menu-primary';
 
 	if ( genesis_a11y( 'headings' ) ) {
 		printf( '<h2 class="screen-reader-text">%s</h2>', __( 'Main navigation', 'genesis' ) );
@@ -55,7 +55,7 @@ add_action( 'genesis_after_header', function() {
 	genesis_nav_menu( array(
 		'theme_location' => 'primary',
 		'menu_class'     => $class,
-		'items_wrap' 	 => '<ul id="%1$s" class="%2$s" data-dropdown-menu>%3$s</ul>',
+		'items_wrap' 	 => '<ul id="%1$s" class="%2$s" data-responsive-menu="medium-dropdown">%3$s</ul>',
 		'walker'		 => new Foundation_Dropdown_Nav_Menu
 	) );
 
